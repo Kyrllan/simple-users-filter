@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import {Content} from './styles';
 
 interface User {
   id: number;
@@ -28,10 +29,12 @@ export function List() {
   }, []);
 
   return (
-    <ul>
-      {users.map((user) => {
-        return <li key={user.id}>{user.firstName}</li>;
-      })}
-    </ul>
+    <Content>
+      <ul>
+        {users.map((user) => {
+          return <li key={user.id}>{user.firstName}</li>;
+        })}
+      </ul>
+    </Content>
   );
 }

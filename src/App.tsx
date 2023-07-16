@@ -1,16 +1,17 @@
-import './App.css'
-import { Header } from './components/Header/Header'
-import { List } from './components/List/List'
+import {Header} from './components/Header';
+import {List} from './components/List';
+import {GlobalStyle, Container} from './styles/global';
 
 function App() {
-
-
   return (
     <>
-      <Header />
-      <List />
+      <Container>
+        <Header />
+        <List />
+        <GlobalStyle />
+      </Container>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
