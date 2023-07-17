@@ -3,7 +3,10 @@ import {createGlobalStyle, styled} from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
 :root {
 
-    --background: #F0F2F5;
+    --background: #EEEBE5;
+    --background2: #F7F6F2;
+    --background3: #cdd0db;
+    --background4: #FFF8DD;
     --primary: #1666ba;
     --secondary: #bedaf7;
 
@@ -48,7 +51,6 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
-
   [disabled] {
     opacity: 0.6;
     cursor: not-allowed;
@@ -62,26 +64,20 @@ export const Container = styled.header`
 export const Content = styled.div`
   max-width: 1120px;
   margin: 0 auto;
-
-  padding: 2rem 1rem 9rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  button {
-    font-size: 1rem;
-    color: #fff;
-    background: var(--blue-light);
-    border: 0;
-    padding: 0 2rem;
-    border-radius: 0.25rem;
-    height: 3rem;
-
-    transition: filter 0.2s;
-
-    &:hover {
-      filter: brightness(0.9);
-    }
-  }
+  flex-wrap: wrap;
 `;
 
+export const Column1 = styled.div`
+  min-width: 0;
+  flex-basis: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+`;
+
+export const Column2 = styled.div`
+  min-width: 0;
+  flex-basis: 60%;
+  padding: 10px;
+  box-sizing: border-box;
+`;

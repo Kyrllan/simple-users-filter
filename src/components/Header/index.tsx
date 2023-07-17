@@ -4,7 +4,7 @@ export function Header() {
   return (
     <Container>
       <Content>
-        <input type="text" placeholder="Buscar usuário"/>
+       <h1>Simple Users Filter</h1>
       </Content>
     </Container>
   );
