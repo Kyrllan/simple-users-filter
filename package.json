@@ -2,12 +2,14 @@
   "name": "simple-users-filter",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://kyrllan.github.io/simple-users-filter",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",

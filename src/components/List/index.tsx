@@ -1,19 +1,12 @@
 import {ChangeEvent, useEffect, useState} from 'react';
 import {Content} from './styles';
+import {User} from '../../models/User';
 
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  gender: string;
-  email: string;
-  phone: string;
-  birthDate: string;
-  image: string;
+interface ListOfItens {
+  onItemSelected: (user: User) => void;
 }
 
-export function List() {
+export function List({onItemSelected}: ListOfItens) {
   const [users, setUsers] = useState<User[]>([]);
   const [search, setSearch] = useState('');
 
@@ -21,7 +14,6 @@ export function List() {
     fetch('https://dummyjson.com/users?limit=100')
       .then((response) => response.json())
       .then((data: {users: User[]}) => {
-        console.log(data);
         setUsers(data.users);
       })
       .catch((error) => {
@@ -35,6 +27,10 @@ export function List() {
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
+  };
+
+  const handleItemClick = (user: User) => {
+    onItemSelected(user);
   };
 
   return (
@@ -52,7 +48,7 @@ export function List() {
           <ul>
             {findedUsers.map((user) => {
               return (
-                <li key={user.id}>
+                <li key={user.id} onClick={() => handleItemClick(user)}>
                   <img
                     className="profile-image"
                     src={user.image}

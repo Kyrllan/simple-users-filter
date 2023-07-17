@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     --background4: #FFF8DD;
     --primary: #1666ba;
     --secondary: #bedaf7;
+    --tertiary: #DCD9D2;
 
     --text-title: #363f5f;
     --text-body: #969cb3;
@@ -21,6 +22,22 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    &::-webkit-scrollbar-track{
+      border-radius: 3px;
+      background-color: #FFFFFF;
+    }
+
+    &::-webkit-scrollbar{
+      border-radius: 3px;
+      width: 6px;
+      background-color: #FFFFFF;
+    }
+
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+      background-color: var(--tertiary);
+    }
   }
 
   html {
@@ -63,20 +80,21 @@ export const Container = styled.header`
 
 export const Content = styled.div`
   max-width: 1120px;
+  min-width: 0;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 `;
 
 export const Column1 = styled.div`
-  min-width: 0;
+  min-width: 200px;
   flex-basis: 40%;
   padding: 10px;
   box-sizing: border-box;
 `;
 
 export const Column2 = styled.div`
-  min-width: 0;
+  min-width: 300px;
   flex-basis: 60%;
   padding: 10px;
   box-sizing: border-box;

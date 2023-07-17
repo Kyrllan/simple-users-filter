@@ -13,11 +13,11 @@ export const Content = styled.div`
     width: 100%;
     font-weight: 600;
     font-size: 1.25rem;
+    border-radius: 0.4rem;
   }
 
   li {
     list-style-type: none;
-    margin-bottom: 0.5rem;
     background: var(--background2);
     border-radius: 0.5rem;
     display: flex;
@@ -28,6 +28,10 @@ export const Content = styled.div`
 
     &:hover {
       background: var(--background4);
+    }
+
+    & + li {
+      margin-top: 0.5rem;
     }
 
     .profile-image {
@@ -50,6 +54,7 @@ export const Content = styled.div`
 
   .input-card {
     border-radius: 0.4rem;
+    margin-right: 10px;
     padding: 0 1rem;
     background: red;
     background-color: var(--shape);
