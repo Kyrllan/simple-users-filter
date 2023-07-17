@@ -273,13 +273,19 @@ Error generating stack: `+o.message+`
   display: flex;
   flex-wrap: wrap;
 `,jm=Ye.div`
-  min-width: 200px;
   flex-basis: 40%;
   padding: 10px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `,Dm=Ye.div`
-  min-width: 300px;
   flex-basis: 60%;
   padding: 10px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;function Fm(){const[e,t]=it.useState({id:0,firstName:"",lastName:"",age:0,gender:"",email:"",phone:"",birthDate:"",image:"",address:{address:"",city:"",postalCode:"",state:""}}),n=r=>{t(r)};return N.jsx(N.Fragment,{children:N.jsxs(Im,{children:[N.jsx(_m,{}),N.jsxs(Om,{children:[N.jsx(jm,{children:N.jsx(Nm,{onItemSelected:n})}),N.jsx(Dm,{children:N.jsx(Lm,{selectedItem:e})})]}),N.jsx($m,{})]})})}Wo.createRoot(document.getElementById("root")).render(N.jsx(He.StrictMode,{children:N.jsx(Fm,{})}));
