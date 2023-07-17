@@ -87,15 +87,21 @@ export const Content = styled.div`
 `;
 
 export const Column1 = styled.div`
-  min-width: 200px;
   flex-basis: 40%;
   padding: 10px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;
 
 export const Column2 = styled.div`
-  min-width: 300px;
   flex-basis: 60%;
   padding: 10px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-basis: 100%;
+  }
 `;
