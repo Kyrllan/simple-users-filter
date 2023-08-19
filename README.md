@@ -1,6 +1,6 @@
 # simple-users-filter
 
-link: https://kyrllan.github.io/simple-users-filter/
+Demo: https://kyrllan.github.io/simple-users-filter/
 
 Ao longo dos anos sempre vim utilizando vue Js como meu principal framework de desenvolvimento front end. 
 Com a finalidade de aprimorar meus conhecimentos em react decidi desenvolver esse simples filtro de usuários.
